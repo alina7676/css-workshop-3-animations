@@ -69,3 +69,58 @@ body {
 /* который отключает анимации у всех карточек                  */
 
 /* ваш медиазапрос здесь */
+
+@keyframes blink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.box-2 {
+    animation: blink 0.4s infinite alternate;
+}
+
+@keyframes pulse {
+     0% {transform: scale(1);}
+    100% {transform: scale(1.05);}
+}
+
+.box-3 {
+    animation: pulse 0.4s infinite alternate;
+}
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(30px);}
+}
+
+.box-4 {
+    animation: slide 1s infinite alternate;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateY(50px);
+        opacity: o;
+    }
+    35% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.box-1 {
+    animation: fade-in 0.9s infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+    .box-1,
+    .box-2,
+    .box-3,
+    .bax-4 {
+        animation: none;
+    }
+}
